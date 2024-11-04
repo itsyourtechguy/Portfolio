@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.section-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left side (Home Section) */
+.home-section {
+  width: 30%;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-right: 2px solid #ddd;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Right side (Main Content Section) */
+.main-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-content {
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+}

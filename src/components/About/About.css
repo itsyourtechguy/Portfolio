@@ -1,0 +1,42 @@
+.AboutPage {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.AboutPage h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.AboutPage p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.AboutPage h1,
+.AboutPage p strong {
+  color: #f0a500;
+}
+
+@media (max-width: 600px) {
+  .AboutPage {
+    padding: 1.5rem;
+  }
+
+  .AboutPage h1 {
+    font-size: 2rem;
+  }
+
+  .AboutPage p {
+    font-size: 1rem;
+  }
+}
