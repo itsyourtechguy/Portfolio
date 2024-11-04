@@ -8,8 +8,8 @@ const projectsData = [
     description:
       "A personal portfolio website built with React and styled-components.",
     technologies: ["React", "CSS", "JavaScript"],
-    link: "https://86n63g.csb.app/",
-    github: "https://codesandbox.io/p/sandbox/portfolio-86n63g",
+    link: "https://itsyourtechguy.github.io/Portfolio/",
+    github: "https://github.com/itsyourtechguy/Portfolio",
   },
   {
     id: 2,
