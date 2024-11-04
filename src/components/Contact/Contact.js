@@ -8,6 +8,8 @@ const Contact = () => {
     message: "",
   });
 
+const [isSent, setIsSent] = useState(false)
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -15,6 +17,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSent(true)
     console.log("Message sent:", form);
     setForm({ name: "", email: "", message: "" });
   };
@@ -48,6 +51,7 @@ const Contact = () => {
         ></textarea>
         <button type="submit">Send Message</button>
       </form>
+      {isSent && <p>Your message has been sent.</p>}
     </div>
   );
 };
