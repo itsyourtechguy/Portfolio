@@ -1,45 +1,34 @@
-import hangman from "../images/hangman.png";
-import drum from "../images/drum.png";
-import simon from "../images/simon.png";
-import portfolio from "../images/portfolio.png";
+import threeD from "../images/3D.png"
+import QR from "../images/QR.png"
+import zoom from "../images/zoom.png"
 
 const projectsData = [
   {
     id: 1,
-    name: "Hangman Game",
-    description: "A fun and interactive guessing game.",
-    technologies: ["React", "CSS", "JavaScript"],
-    link: "https://itsyourtechguy.github.io/hangman-game/",
-    github: "https://github.com/itsyourtechguy/hangman-game",
-    image: hangman,
+    name: "3D Portfolio",
+    description: "Porfolio website using Three.js",
+    technologies: ["ThreeJS", "React", "CSS"],
+    link: "https://itsyourtechguy.github.io/3d-portfolio/",
+    github: "https://github.com/itsyourtechguy/3d-portfolio",
+    image: threeD,
   },
   {
-    id: 2,
-    name: "Drum-kit Game",
-    description: "Want to feel like a drummer?",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    link: "https://itsyourtechguy.github.io/Drum-kit-game/",
-    github: "https://github.com/itsyourtechguy/Drum-kit-game",
-    image: drum,
+    id: 1,
+    name: "QR Generator",
+    description: "Generate a QR for any link",
+    technologies: ["Node", "JavaScript"],
+    link: "#",
+    github: "https://github.com/itsyourtechguy/QR-generator",
+    image: QR,
   },
   {
-    id: 3,
-    name: "Simon-challenge Game",
-    description: "A sequence game that tests your memory.",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    link: "https://itsyourtechguy.github.io/simon-challenge-game/",
-    github: "https://github.com/itsyourtechguy/simon-challenge-game",
-    image: simon,
-  },
-  {
-    id: 4,
-    name: "Portfolio Website",
-    description:
-      "A personal portfolio website built with React and Tailwind CSS.",
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    link: "https://itsyourtechguy.github.io/Portfolio/",
-    github: "https://github.com/itsyourtechguy/Portfolio",
-    image: portfolio,
+    id: 1,
+    name: "Yoom App",
+    description: "A clone of the known Zoom App.",
+    technologies: ["Next.js", "CSS", "JavaScript"],
+    link: "#",
+    github: "https://github.com/itsyourtechguy/yoom-app",
+    image: zoom,
   },
 ];
 
