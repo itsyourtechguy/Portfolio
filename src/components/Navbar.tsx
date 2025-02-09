@@ -3,6 +3,7 @@ import { useState } from "react";
 function Navbar({ setActiveSection }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
   const resumeLink = "https://itsyourtechguy.github.io/resume";
+  const threeDLink = "https://itsyourtechguy.github.io/3d-portfolio";
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -43,7 +44,12 @@ function Navbar({ setActiveSection }: any) {
             Contact
           </li>
           <li className="cursor-pointer hover:text-yellow-400 transition duration-300 px-4 py-2">
-            <a href={resumeLink} rel="noopener noreferrer">
+            <a href={threeDLink} rel="noopener noreferrer" target="">
+              3D Portfolio
+            </a>
+          </li>
+          <li className="cursor-pointer hover:text-yellow-400 transition duration-300 px-4 py-2">
+            <a href={resumeLink} rel="noopener noreferrer" target="">
               Resume
             </a>
           </li>
