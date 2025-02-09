@@ -16,12 +16,12 @@ function Navbar({ setActiveSection }: any) {
 
   return (
     <>
-      <nav className="flex justify-between items-center px-6 py-4 bg-gray-900 text-white shadow-md relative">
+      <nav className="flex justify-between items-center px-6 py-4 bg-gray-900 text-white shadow-md relative z-50">
         <div className="text-2xl font-bold text-yellow-400">Ankit Sharma</div>
         <ul
           className={`md:flex gap-6 text-lg uppercase font-semibold ${
             menuOpen
-              ? "flex flex-col absolute top-16 left-0 w-full bg-gray-900 py-4 shadow-lg"
+              ? "flex flex-col absolute top-16 left-0 w-full bg-gray-900 py-4 shadow-lg z-50"
               : "hidden"
           } md:flex-row md:static md:bg-transparent md:shadow-none`}
         >
@@ -44,25 +44,25 @@ function Navbar({ setActiveSection }: any) {
             Contact
           </li>
           <li className="cursor-pointer hover:text-yellow-400 transition duration-300 px-4 py-2">
-            <a href={threeDLink} rel="noopener noreferrer" target="">
+            <a href={threeDLink} rel="noopener noreferrer" target="_blank">
               3D Portfolio
             </a>
           </li>
           <li className="cursor-pointer hover:text-yellow-400 transition duration-300 px-4 py-2">
-            <a href={resumeLink} rel="noopener noreferrer" target="">
+            <a href={resumeLink} rel="noopener noreferrer" target="_blank">
               Resume
             </a>
           </li>
         </ul>
         {/* Mobile Menu Button */}
-        <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
+        <div className="md:hidden text-2xl cursor-pointer z-50" onClick={toggleMenu}>
           &#9776;
         </div>
       </nav>
       {/* Overlay when menu is open */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-10"
+          className="fixed inset-0 bg-black opacity-50 z-40"
           onClick={toggleMenu}
         ></div>
       )}
