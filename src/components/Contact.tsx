@@ -1,19 +1,46 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [isSent, setIsSent] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setIsSent(true);
-    console.log("Message sent:", form);
-    setForm({ name: "", email: "", message: "" });
+    setLoading(true);
+    setMessage("");
+
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: "Ankit Sharma",
+          from_email: form.email,
+          to_email: "crronaldo749@gmail.com",
+          message: form.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setLoading(false);
+        setMessage("Thank you! I will get back to you soon.");
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch(() => {
+        setLoading(false);
+        setMessage("Something went wrong. Please try again.");
+      });
   };
 
   return (
@@ -21,6 +48,11 @@ const Contact = () => {
       <h1 className="text-3xl font-bold mb-6 text-gray-800 md:text-2xl sm:text-xl">
         Contact Me
       </h1>
+      {message && (
+        <p className={`text-sm ${message.includes("wrong") ? "text-red-500" : "text-green-600"} mb-4`}>
+          {message}
+        </p>
+      )}
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
@@ -50,14 +82,14 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="w-full p-3 text-base font-semibold text-white bg-yellow-500 rounded-md hover:bg-yellow-600 transition-colors"
+          disabled={loading}
+          className={`w-full p-3 text-base font-semibold text-white rounded-md transition-colors ${
+            loading ? "bg-gray-400 cursor-not-allowed" : "bg-yellow-500 hover:bg-yellow-600"
+          }`}
         >
-          Send Message
+          {loading ? "Sending..." : "Send"}
         </button>
       </form>
-      {isSent && (
-        <p className="mt-4 text-green-600">Your message has been sent.</p>
-      )}
     </div>
   );
 };
