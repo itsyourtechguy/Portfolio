@@ -10,11 +10,11 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
@@ -36,10 +36,20 @@ const Contact = () => {
         setLoading(false);
         setMessage("Thank you! I will get back to you soon.");
         setForm({ name: "", email: "", message: "" });
+
+        // Auto-hide message after 3 seconds
+        setTimeout(() => {
+          setMessage("");
+        }, 3000);
       })
       .catch(() => {
         setLoading(false);
         setMessage("Something went wrong. Please try again.");
+
+        // Auto-hide error message after 3 seconds
+        setTimeout(() => {
+          setMessage("");
+        }, 3000);
       });
   };
 
