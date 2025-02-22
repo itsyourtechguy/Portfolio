@@ -15,6 +15,7 @@ import {
 import Avatar from "../images/Avatar.jpeg";
 import backImg1 from "../images/back-1.jpg";
 import backImg2 from "../images/back-2.jpg";
+import resume from "../Ankit Sharma CV.pdf"
 
 // Interface for Social Links
 export interface SocialLink {
@@ -34,7 +35,7 @@ export interface NavItem {
 // Interface for Service Items
 export interface ServiceItem {
   name: string;
-  icon: IconType; // We'll use react-icons for consistency
+  icon: IconType;
   description: string;
 }
 
@@ -78,7 +79,7 @@ export const Personal: PersonalData = {
       hoverColor: "text-pink-500",
     },
   ],
-  resumePath: "/path/to/resume.pdf",
+  resumePath: resume,
   contactLink: "#contactform",
 };
 
