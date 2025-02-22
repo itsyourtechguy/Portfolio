@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 const Type = () => {
   return (
-    <div className="text-lg text-gray-600 mt-2">
+    <div className="text-lg mt-2 text-center">
       <Typewriter
         options={{
           strings: [
@@ -13,7 +13,7 @@ const Type = () => {
           autoStart: true,
           loop: true,
           delay: 70,
-          deleteSpeed: 20,
+          deleteSpeed: 80,
         }}
       />
     </div>
