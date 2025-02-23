@@ -1,9 +1,13 @@
 import ContactForm from "../utils/ContactForm";
 import Title from "../utils/Title";
 
-const Contact = () => {
+interface ContactProps {
+  id?: string,
+}
+
+const Contact: React.FC<ContactProps> = ({ id }) => {
   return (
-    <>
+    <section id={id}>
       {/* Get in Touch Title */}
       <Title t="G" title="et In Touch" />
 
@@ -44,7 +48,7 @@ const Contact = () => {
       <Title t="C" title="ontact Form" />
       <ContactForm />
       
-    </>
+    </section>
   );
 };
 

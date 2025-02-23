@@ -1,11 +1,15 @@
 import Title from "../utils/Title";
 import { AboutMe } from "../../constant/data";
 
-const About = () => {
+interface AboutProps {
+  id?: string,
+}
+
+const About: React.FC <AboutProps> = ({ id }) => {
   return (
     <>
       {/* About Me Section */}
-      <section className="mb-8">
+      <section className="mb-8" id={id}>
         {/* Section Title */}
         <Title t="A" title="bout Me" />
 

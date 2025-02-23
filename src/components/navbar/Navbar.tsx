@@ -11,8 +11,8 @@ function Navbar({ setActiveSection, activeSection }: NavbarProps) {
   };
 
   return (
-    <nav className="flex flex-col hoverable justify-start items-start p-0 bg-[#2d2d2d] text-white shadow-md h-full">
-      <ul className="flex flex-col gap-2 text-xs uppercase font-lekton">
+    <nav className="hoverable text-white shadow-md h-full text-xs uppercase font-lekton md:bg-[#2d2d2d] ">
+      <ul className="flex gap-6 items-center ml-4 md:ml-0 md:flex-col md:gap-2">
         {NavItems.map((item, index: number) => {
           const Icon = item.icon;
           const isActive = activeSection === item.section;
@@ -21,7 +21,7 @@ function Navbar({ setActiveSection, activeSection }: NavbarProps) {
             <li
               key={index}
               onClick={() => handleLinkClick(item.section)}
-              className={`cursor-pointer flex flex-col items-center p-2 border-b border-[#3d3d3d] transition duration-300 group ${
+              className={`cursor-pointer flex flex-col items-center p-2 md:border-b border-[#3d3d3d] transition duration-300 group ${
                 isActive ? "text-ryancv-yellow" : ""
               }`}
             >

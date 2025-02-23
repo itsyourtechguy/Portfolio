@@ -53,9 +53,9 @@ const Block: React.FC<BlockProps> = ({
   );
 };
 
-const Resume = () => {
+const Resume: React.FC<ResumeProps> = ({ id }) => {
   return (
-    <>
+    <section id={id}>
       <Title t="R" title="esume" />
       <div className="flex flex-col md:flex-row gap-8 my-8">
         {/* Experience Section */}
@@ -189,8 +189,12 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
 export default Resume;
+
+interface ResumeProps {
+  id?: string,
+}

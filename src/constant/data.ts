@@ -49,6 +49,7 @@ export interface AboutMeInfo {
 export interface PersonalData {
   name: string;
   avatar: string;
+  link: string;
   backgroundImages: string[];
   socialLinks: SocialLink[];
   resumePath: string;
@@ -59,6 +60,7 @@ export const Personal: PersonalData = {
   name: "Ankit Sharma",
   avatar: Avatar,
   backgroundImages: [backImg1, backImg2],
+  link: "https://itsyourtechguy.github.io/Portfolio",
   socialLinks: [
     {
       name: "GitHub",

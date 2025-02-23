@@ -1,8 +1,12 @@
 import Typewriter from "typewriter-effect";
 
-const Type = () => {
+interface TypeProps {
+  inHeader?: boolean,
+}
+
+const Type: React.FC<TypeProps> = ({ inHeader }) => {
   return (
-    <div className="text-lg mt-2 text-center">
+    <div className={`text-sm ${inHeader ? 'text-xs text-ryancv-yellow' : 'text-center mt-2 '}`}>
       <Typewriter
         options={{
           strings: [
