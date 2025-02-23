@@ -42,13 +42,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-ryancv-dark text-white font-lekton">
+    <div className="min-h-screen max-w-screen bg-ryancv-dark text-white font-lekton">
       <Background />
       <CustomCursor />
       <MoveToTop activeSection={activeSection} />
 
       {/* Mobile Layout */}
-      <div className="md:hidden">
+      <div className="z-50 md:hidden">
         {/* Navbar */}
         <div className="sticky top-0 bg-ryancv-dark shadow-md z-50">
           {" "}
