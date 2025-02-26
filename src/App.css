@@ -1,99 +1,108 @@
 .lines .line {
-    fill: #211d17;
-    opacity: 0.3;
-  }
-  
-  .lights .light {
-    fill: #f6b846;
+  fill: var(--color-line-fill);
+  opacity: var(--color-line-opacity);
+}
+
+.lights .light {
+  fill: var(--color-light-fill);
+  opacity: var(--color-light-opacity);
+}
+
+@keyframes flicker {
+  0% {
     opacity: 0.7;
   }
-  
-  @keyframes flicker {
-    0% {
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 0.3;
-    }
-    100% {
-      opacity: 0.7;
-    }
+  50% {
+    opacity: 0.3;
   }
-  
-  @keyframes verticalMove {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(1080px);
-    }
+  100% {
+    opacity: 0.7;
   }
-  
-  /* Apply animations to each light class with different durations */
-  .light1 {
-    animation: flicker 2s infinite, verticalMove 15s linear infinite;
+}
+
+@keyframes verticalMove {
+  0% {
+    transform: translateY(0);
   }
-  
-  .light2 {
-    animation: flicker 1.5s infinite, verticalMove 12s linear infinite;
+  100% {
+    transform: translateY(1080px);
   }
-  
-  .light3 {
-    animation: flicker 2.2s infinite, verticalMove 18s linear infinite;
+}
+
+@keyframes verticalMoveReverse {
+  0% {
+    transform: translateY(1080px);
   }
-  
-  .light4 {
-    animation: flicker 1.8s infinite, verticalMove 14s linear infinite;
+  100% {
+    transform: translateY(0);
   }
-  
-  .light5 {
-    animation: flicker 2.5s infinite, verticalMove 16s linear infinite;
-  }
-  
-  .light6 {
-    animation: flicker 1.7s infinite, verticalMove 13s linear infinite;
-  }
-  
-  .light7 {
-    animation: flicker 2.3s infinite, verticalMove 17s linear infinite;
-  }
-  
-  .light8 {
-    animation: flicker 1.9s infinite, verticalMove 15.5s linear infinite;
-  }
-  
-  .light9 {
-    animation: flicker 2.1s infinite, verticalMove 14.5s linear infinite;
-  }
-  
-  .light10 {
-    animation: flicker 1.6s infinite, verticalMove 13.5s linear infinite;
-  }
-  
-  .light11 {
-    animation: flicker 2.4s infinite, verticalMove 16.5s linear infinite;
-  }
-  
-  .light12 {
-    animation: flicker 1.8s infinite, verticalMove 14.8s linear infinite;
-  }
-  
-  .light13 {
-    animation: flicker 2s infinite, verticalMove 15.2s linear infinite;
-  }
-  
-  .light14 {
-    animation: flicker 1.7s infinite, verticalMove 13.8s linear infinite;
-  }
-  
-  .light15 {
-    animation: flicker 2.2s infinite, verticalMove 16.2s linear infinite;
-  }
-  
-  .light16 {
-    animation: flicker 1.9s infinite, verticalMove 14.2s linear infinite;
-  }
-  
-  .light17 {
-    animation: flicker 2.3s infinite, verticalMove 15.8s linear infinite;
-  }
+}
+
+/* Apply animations to each light class with different durations */
+.light1 {
+  animation: flicker 2s infinite, verticalMoveReverse 15s linear infinite;
+}
+
+.light2 {
+  animation: flicker 1.5s infinite, verticalMoveReverse 12s linear infinite;
+}
+
+.light3 {
+  animation: flicker 2.2s infinite, verticalMoveReverse 18s linear infinite;
+}
+
+.light4 {
+  animation: flicker 1.8s infinite, verticalMoveReverse 14s linear infinite;
+}
+
+.light5 {
+  animation: flicker 2.5s infinite, verticalMove 16s linear infinite;
+}
+
+.light6 {
+  animation: flicker 1.7s infinite, verticalMove 13s linear infinite;
+}
+
+.light7 {
+  animation: flicker 2.3s infinite, verticalMoveReverse 17s linear infinite;
+}
+
+.light8 {
+  animation: flicker 1.9s infinite, verticalMove 15.5s linear infinite;
+}
+
+.light9 {
+  animation: flicker 2.1s infinite, verticalMoveReverse 14.5s linear infinite;
+}
+
+.light10 {
+  animation: flicker 1.6s infinite, verticalMove 13.5s linear infinite;
+}
+
+.light11 {
+  animation: flicker 2.4s infinite, verticalMove 16.5s linear infinite;
+}
+
+.light12 {
+  animation: flicker 1.8s infinite, verticalMove 14.8s linear infinite;
+}
+
+.light13 {
+  animation: flicker 2s infinite, verticalMoveReverse 15.2s linear infinite;
+}
+
+.light14 {
+  animation: flicker 1.7s infinite, verticalMove 13.8s linear infinite;
+}
+
+.light15 {
+  animation: flicker 2.2s infinite, verticalMove 16.2s linear infinite;
+}
+
+.light16 {
+  animation: flicker 1.9s infinite, verticalMove 14.2s linear infinite;
+}
+
+.light17 {
+  animation: flicker 2.3s infinite, verticalMoveReverse 15.8s linear infinite;
+}

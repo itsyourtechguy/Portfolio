@@ -18,6 +18,11 @@
   --color-yellow: #f6b846;
   --color-text: #ffffff;
   --color-heading: #ffffff;
+  /* For lights and lines */
+  --color-light-fill: #f6b846;
+  --color-light-opacity: 0.7;
+  --color-line-fill: #211d17;
+  --color-line-opacity: 0.3;
 }
 
 [data-theme="light"] {
@@ -27,4 +32,8 @@
   --color-border: #e0e0e0;
   --color-heading: #1a1a1a;
   --color-text: #222222;
+  --color-light-fill: #0e0c01;
+  --color-light-opacity: 0.9;
+  --color-line-fill: #f8f8f8;
+  --color-line-opacity: 0.5;
 }
