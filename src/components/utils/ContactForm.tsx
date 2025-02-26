@@ -69,7 +69,7 @@ const ContactForm = () => {
             placeholder="Full Name"
             value={form.name}
             onChange={handleChange}
-            className="w-full p-2 border-b-2 border-[#3b3b3b] bg-ryancv-sidebar text-white focus:border-ryancv-yellow focus:cursor-text-ryancv-yellow focus:outline-none transition-all"
+            className="w-full p-2 border-b-2 border-ryancv-border bg-ryancv-sidebar text-ryancv-text focus:border-ryancv-yellow focus:cursor-text-ryancv-yellow focus:outline-none transition-all"
             required
           />
         </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
             placeholder="Email Address"
             value={form.email}
             onChange={handleChange}
-            className="w-full p-2 border-b-2 border-[#3b3b3b] bg-ryancv-sidebar text-white focus:border-ryancv-yellow focus:outline-none transition-all"
+            className="w-full p-2 border-b-2 border-ryancv-border bg-ryancv-sidebar text-ryancv-text focus:border-ryancv-yellow focus:outline-none transition-all"
             required
           />
         </div>
@@ -90,13 +90,13 @@ const ContactForm = () => {
             placeholder="Your Message"
             value={form.message}
             onChange={handleChange}
-            className="w-full p-2 border-b-2 border-[#3b3b3b] bg-ryancv-sidebar text-white h-32 focus:border-ryancv-yellow focus:outline-none transition-all"
+            className="w-full p-2 border-b-2 border-ryancv-border bg-ryancv-sidebar text-ryancv-text h-32 focus:border-ryancv-yellow focus:outline-none transition-all"
             required
           ></textarea>
         </div>
         <button
           type="submit"
-          className={`px-6 py-2 font-bold uppercase bg-ryancv-sidebar text-white rounded transition-all flex items-center gap-2 ${
+          className={`px-6 py-2 font-bold uppercase bg-ryancv-sidebar text-ryancv-text rounded transition-all flex items-center gap-2 ${
             loading ? "cursor-not-allowed" : "hover:text-ryancv-yellow hover:scale-110"
           }`}
         >

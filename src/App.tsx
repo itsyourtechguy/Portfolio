@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "./components/navbar/Navbar";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -13,6 +13,15 @@ import Header from "./components/navbar/Header";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
   const renderSection = () => {
     switch (activeSection) {
@@ -42,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen max-w-screen bg-ryancv-dark text-white font-lekton">
+    <div className="min-h-screen max-w-screen">
       <Background />
       <CustomCursor />
       <MoveToTop activeSection={activeSection} />
@@ -57,11 +66,13 @@ function App() {
           <Nav
             setActiveSection={handleSectionChange}
             activeSection={activeSection}
+            toggleTheme={toggleTheme}
+            isDarkMode={isDarkMode}
           />
         </div>
 
         {/* Content */}
-        <div className="w-[80%] flex flex-col mx-auto p-4 bg-ryancv-sidebar overflow-y-auto z-10">
+        <div className="w-[90%] flex flex-col mx-auto p-4 bg-ryancv-sidebar overflow-y-auto z-10">
           <Home />
           <About id="about" />
           <Resume id="resume" />
@@ -77,6 +88,8 @@ function App() {
           <Nav
             setActiveSection={setActiveSection}
             activeSection={activeSection}
+            toggleTheme={toggleTheme}
+            isDarkMode={isDarkMode}
           />
         </div>
 

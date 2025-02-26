@@ -10,8 +10,8 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ t, title, logo = false, icon: Icon }) => {
   return (
-    <div className="border-b text-xl border-[#3d3d3d] pb-6 relative">
-      <div className="font-bold text-white">
+    <div className="border-b text-xl border-ryancv-border pb-6 relative">
+      <div className="font-bold text-ryancv-heading">
         <span className="z-10 relative flex items-center">
           {logo && Icon && ( 
             <div className="rounded-full h-auto w-auto text-ryancv-yellow border-[1px] border-ryancv-yellow p-2 mr-2">

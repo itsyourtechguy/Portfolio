@@ -25,7 +25,7 @@ const Block: React.FC<BlockProps> = ({
   isActive,
 }) => {
   return (
-    <div className="text-gray-300 border-b h-48 pb-2 border-[#3d3d3d]">
+    <div className="text-ryancv-text border-b h-48 pb-2 border-ryancv-border">
       <div className="flex flex-col items-start gap-2">
         <div
           className={`text-xs border-[1px] ${
@@ -37,7 +37,7 @@ const Block: React.FC<BlockProps> = ({
           {duration}
         </div>
         {(role || institution) && (
-          <div className="font-bold text-white">{role || institution}</div>
+          <div className="font-bold text-ryancv-heading">{role || institution}</div>
         )}
         {(company || location) && (
           <div className="text-sm">{company || location}</div>
@@ -45,7 +45,7 @@ const Block: React.FC<BlockProps> = ({
       </div>
       <p className="mt-2">{description}</p>
       {link && (
-        <p className="text-sm uppercase mt-2 cursor-pointer text-white font-bold hover:text-ryancv-yellow">
+        <p className="text-sm uppercase mt-2 cursor-pointer text-ryancv-heading font-bold hover:text-ryancv-yellow">
           {institution ? "Certificate" : "Recommendation"} &gt;
         </p>
       )}
@@ -107,18 +107,18 @@ const Resume: React.FC<ResumeProps> = ({ id }) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center text-white mb-8"
+                  className="flex flex-col items-center justify-center text-ryancv-heading mb-8"
                 >
                   {/* Progress Ring */}
                   <div
                     className="rounded-full w-24 h-24 flex items-center justify-center"
                     style={{
                       background: gradient,
-                      border: '4px solid #222222',
+                      border: `4px solid var(--color-sidebar)`,
                       borderRadius: "50%",
                     }}
                   >
-                    <div className="rounded-full bg-[#222222] w-20 h-20 flex items-center justify-center text-xl">
+                    <div className="rounded-full bg-ryancv-sidebar w-20 h-20 flex items-center justify-center text-xl">
                       {cod.percent}
                     </div>
                   </div>
@@ -137,7 +137,7 @@ const Resume: React.FC<ResumeProps> = ({ id }) => {
               {ResumeData.knowledge.map((item, index) => (
                 <li
                   key={index}
-                  className="text-sm flex items-center text-gray-300"
+                  className="text-sm flex items-center text-ryancv-text"
                 >
                   <span className=" text-ryancv-yellow mr-2">✔</span>{" "}
                   {item}

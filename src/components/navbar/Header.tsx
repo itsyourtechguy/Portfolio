@@ -13,7 +13,7 @@ const Header = () => {
         />
         </a>
         <div className="mt-1 flex flex-col gap-0 text-sm">
-          <span className=" text-white">
+          <span className=" text-ryancv-heading">
             {Personal.name}
           </span>
           <Type inHeader={true} />

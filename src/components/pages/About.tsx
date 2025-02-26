@@ -14,7 +14,7 @@ const About: React.FC <AboutProps> = ({ id }) => {
         <Title t="A" title="bout Me" />
 
         {/* Description */}
-        <div className="mt-6 text-gray-300 leading-relaxed">
+        <div className="mt-6 leading-relaxed">
           <p>{AboutMe.about}</p>
         </div>
 
@@ -22,19 +22,19 @@ const About: React.FC <AboutProps> = ({ id }) => {
         <div className="mt-6 grid grid-cols-2 gap-4">
           <div className="flex items-center gap-2">
             <span className="text-ryancv-yellow">AGE</span>
-            <span className="text-gray-300">. . . . {AboutMe.age}</span>
+            <span>. . . . {AboutMe.age}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-ryancv-yellow">FREELANCE</span>
-            <span className="text-gray-300">. . . . {AboutMe.freelance}</span>
+            <span>. . . . {AboutMe.freelance}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-ryancv-yellow">RESIDENCE</span>
-            <span className="text-gray-300">. . . . {AboutMe.residence}</span>
+            <span>. . . . {AboutMe.residence}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-ryancv-yellow">ADDRESS</span>
-            <span className="text-gray-300">. . . . {AboutMe.address}</span>
+            <span>. . . . {AboutMe.address}</span>
           </div>
         </div>
       </section>
@@ -51,15 +51,15 @@ const About: React.FC <AboutProps> = ({ id }) => {
             return (
               <div
                 key={index}
-                className="border-b border-[#3d3d3d] pb-6 relative"
+                className="border-b border-ryancv-border pb-6 relative"
               >
                 <div className="rounded-full text-ryancv-yellow border-[1px] border-ryancv-yellow p-3 w-16 h-16 flex items-center justify-center mb-2">
                   <IconComponent size={40} />
                 </div>
-                <div className="font-bold text-white">
+                <div className="font-bold">
                   {service.title}
                 </div>
-                <div className="text-[#6F6F6F]">{service.description}</div>
+                <div className="text-ryancv-text">{service.description}</div>
               </div>
             );
           })}

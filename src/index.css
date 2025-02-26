@@ -6,7 +6,25 @@
 
 @layer base {
   body {
-    @apply bg-[#1a1a1a] text-white font-lekton;
+    @apply bg-[var(--color-background)] text-[var(--color-text)] font-lekton;
   }
 }
 
+:root {
+  /* Dark Theme Colors */
+  --color-background: #1a1a1a;
+  --color-sidebar: #222222;
+  --color-border: #3d3d3d;
+  --color-yellow: #f6b846;
+  --color-text: #ffffff;
+  --color-heading: #ffffff;
+}
+
+[data-theme="light"] {
+  /* Light Theme Colors (swapped) */
+  --color-background: #f6f6f6;
+  --color-sidebar: #ffffff;
+  --color-border: #e0e0e0;
+  --color-heading: #1a1a1a;
+  --color-text: #222222;
+}

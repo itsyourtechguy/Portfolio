@@ -9,9 +9,12 @@ module.exports = {
         'lekton': ['Lekton', 'sans-serif'],
       },
       colors: {
-        'ryancv-dark': '#1a1a1a',
-        'ryancv-sidebar': '#222222',
-        'ryancv-yellow': '#f6b846',
+        'ryancv-dark': 'var(--color-background)',
+        'ryancv-sidebar': 'var(--color-sidebar)',
+        'ryancv-border': 'var(--color-border)',
+        'ryancv-yellow': 'var(--color-yellow)',
+        'ryancv-text': 'var(--color-text)',
+        'ryancv-heading': 'var(--color-heading)',
       },
       fontFamily: {
         'lekton': ['Lekton', 'sans-serif'],

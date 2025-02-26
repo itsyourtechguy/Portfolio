@@ -25,7 +25,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
       {/* Info List */}
       <div className="mb-6">
         <div className="grid grid-cols-2 gap-6">
-          <div className="text-gray-300">
+          <div className="text-ryancv-text">
             <p className="mb-4">
               <strong>Address:</strong> Budapest, Hungary
             </p>
@@ -33,7 +33,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               <strong>Email:</strong> ankit260196sharma@gmail.com
             </p>
           </div>
-          <div className="text-gray-300">
+          <div className="text-ryancv-text">
             <p className="mb-4">
               <strong>Phone:</strong> +36 704137849
             </p>
