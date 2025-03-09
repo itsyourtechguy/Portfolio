@@ -31,7 +31,7 @@ export default function CustomCursor() {
       className={`fixed z-[1000] rounded-full pointer-events-none transition-transform duration-300 ease-in-out ${
         isHovering
           ? "rounded-full w-20 h-20 bg-transparent border border-yellow-500"
-          : "w-10 h-10 bg-[#4c412d]"
+          : "w-10 h-10 bg-[#624d33]"
       }`}
       style={{
         top: `${position.y}px`,
