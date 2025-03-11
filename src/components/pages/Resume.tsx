@@ -45,9 +45,9 @@ const Block: React.FC<BlockProps> = ({
       </div>
       <p className="mt-2">{description}</p>
       {link && (
-        <p className="text-sm uppercase mt-2 cursor-pointer text-ryancv-heading font-bold hover:text-ryancv-yellow">
+        <a className="text-sm uppercase mt-2 cursor-pointer text-ryancv-heading font-bold hover:text-ryancv-yellow" href={link} target="_blank">
           {institution ? "Certificate" : "Recommendation"} &gt;
-        </p>
+        </a>
       )}
     </div>
   );

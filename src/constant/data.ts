@@ -15,7 +15,15 @@ import {
 import Avatar from "../images/Avatar.jpeg";
 import backImg1 from "../images/back-1.jpg";
 import backImg2 from "../images/back-2.jpg";
-import resume from "../Ankit Sharma CV.pdf"
+import resume from "../Ankit Sharma CV.pdf";
+import nixCert from "../images/certificates/NIX certificate.pdf";
+import master from "../images/certificates/Diploma certificate.pdf";
+import bachelor from "../images/certificates/Bachelor's degree certificate.pdf";
+import threeD from "../images/projects/3D.png";
+import QR from "../images/projects/QR.png";
+import zoom from "../images/projects/zoom.png";
+import drum from "../images/projects/drum.png";
+import simon from "../images/projects/simon.png";
 
 // Interface for Social Links
 export interface SocialLink {
@@ -54,6 +62,14 @@ export interface PersonalData {
   socialLinks: SocialLink[];
   resumePath: string;
   contactLink: string;
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
 }
 
 export const Personal: PersonalData = {
@@ -95,7 +111,7 @@ export const NavItems: NavItem[] = [
 
 export const AboutMe = {
   about:
-    "Hello! I’m Ankit Sharma. Back-end & Front-end developer from India, Delhi. I have rich experience in web development, and I am good at React and Node.js. I love to talk with you about our unique.",
+    "Hello! I'm Ankit Sharma, a passionate Frontend Developer with over 5 years of experience in building scalable web applications. Specializing in React, Node.js, and TypeScript. Always eager to learn and innovate, I thrive on delivering clean, maintainable code. Currently based in Budapest, Hungary, I am open to freelance opportunities and new collaborations.",
   age: "29",
   freelance: "Available",
   residence: "Hungary",
@@ -105,13 +121,13 @@ export const AboutMe = {
       title: "Front-end",
       icon: FaReact,
       description:
-        "Modern and mobile-ready website that will help you reach all of your marketing goals.",
+        "Building sleek, modern, and mobile-ready websites that captivate users and drive results. Every pixel is designed with purpose, ensuring a seamless and engaging digital experience.",
     },
     {
       title: "Back-end",
       icon: FaPython,
       description:
-        "UI/UX focus on the user, frontend focus on the settings of the user, and backend focus on the data.",
+        "Where logic meets efficiency—turning complex data into smooth, intuitive interactions. The frontend tailors the experience, the backend fuels the engine, and the UI/UX bridges the gap for a flawless user journey.",
     },
   ],
 };
@@ -150,21 +166,21 @@ export const ResumeData = {
       institution: "Budapest University",
       location: "Hungary",
       description: "M.Sc. in Applied Mathematics specialization in Finance",
-      link: "#",
+      link: master,
     },
     {
       duration: "2024 - 2025",
       institution: "Programming Course",
       location: "Budapest",
       description: "Coursework - Git, GitHub, JavaScript, React, Redux.",
-      link: "#",
+      link: nixCert,
     },
     {
       duration: "2017 - 2020",
       institution: "Holkar Science College",
       location: "India",
       description: "B.Sc. in Physics, Mathematics & Geology.",
-      link: "#",
+      link: bachelor,
     },
   ],
 
@@ -225,3 +241,41 @@ export const ResumeData = {
     { name: "Spanish", level: 5 },
   ],
 };
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "3D Portfolio",
+    description: "A sleek and modern web app built with React and Node.js.",
+    image: threeD,
+    link: "https://itsyourtechguy.github.io/3d-portfolio",
+  },
+  {
+    id: 2,
+    title: "QR Generator",
+    description: "A QR code generator from link using Node.js.",
+    image: QR,
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "ZOOM clone - YOOM",
+    description: "A brand new ZOOM virtual meeting app YOOM.",
+    image: zoom,
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "DRUM kit",
+    description: "Come play drums virtually. A new era of instruments.",
+    image: drum,
+    link: "https://itsyourtechguy.github.io/Drum-kit-game/",
+  },
+  {
+    id: 5,
+    title: "Memory Game",
+    description: "Do you have good memory? Would you like to test it?",
+    image: simon,
+    link: "https://itsyourtechguy.github.io/simon-challenge-game/",
+  },
+];
