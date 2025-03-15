@@ -24,6 +24,7 @@ import QR from "../images/projects/QR.png";
 import zoom from "../images/projects/zoom.png";
 import drum from "../images/projects/drum.png";
 import simon from "../images/projects/simon.png";
+import task from "../images/projects/task-mate.png";
 
 // Interface for Social Links
 export interface SocialLink {
@@ -262,17 +263,24 @@ export const projects: Project[] = [
     title: "ZOOM clone - YOOM",
     description: "A brand new ZOOM virtual meeting app YOOM.",
     image: zoom,
-    link: "#",
+    link: "https://itsyoutechguy.github.io/zoom/",
   },
   {
     id: 4,
+    title: "Task-Mate",
+    description: "Todo list to put in your task in case of a short memory.",
+    image: task,
+    link: "https://itsyourtechguy.github.io/task-mate/",
+  },
+  {
+    id: 5,
     title: "DRUM kit",
     description: "Come play drums virtually. A new era of instruments.",
     image: drum,
     link: "https://itsyourtechguy.github.io/Drum-kit-game/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Memory Game",
     description: "Do you have good memory? Would you like to test it?",
     image: simon,
